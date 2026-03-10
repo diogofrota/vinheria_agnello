@@ -114,6 +114,10 @@
       transform: translateY(-2px);
     }
 
+    .btn-specialist .btn-label-mobile {
+      display: none;
+    }
+
     .btn-secondary {
       background: transparent;
       border-color: rgba(255,255,255,0.45);
@@ -218,6 +222,14 @@
         linear-gradient(90deg, rgba(30,10,12,0.85) 0%, rgba(30,10,12,0.65) 38%, rgba(30,10,12,0.22) 100%),
         url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: #fff;
+    }
+
+    .hero .tag {
+      background: rgba(255, 246, 235, 0.92);
+      color: var(--wine-dark);
+      border: 1px solid rgba(198, 164, 106, 0.45);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      font-weight: 700;
     }
 
     .hero-grid {
@@ -690,6 +702,21 @@
         display: none;
       }
 
+      .nav-actions .btn-specialist {
+        padding: 10px 14px;
+        font-size: 0.82rem;
+        line-height: 1.1;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-actions .btn-specialist .btn-label-desktop {
+        display: none;
+      }
+
+      .nav-actions .btn-specialist .btn-label-mobile {
+        display: inline;
+      }
+
       .hero,
       .section {
         padding-top: 72px;
@@ -787,7 +814,10 @@
 
       <div class="nav-actions">
         <a class="btn btn-outline" href="#catalogo">Ver rótulos</a>
-        <a class="btn btn-primary" href="#contato">Falar com especialista</a>
+        <a class="btn btn-primary btn-specialist" href="#contato" aria-label="Falar com especialista">
+          <span class="btn-label btn-label-desktop">Falar com especialista</span>
+          <span class="btn-label btn-label-mobile">Especialista</span>
+        </a>
       </div>
     </div>
   </header>
